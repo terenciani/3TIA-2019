@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from './views/Login.vue'
-
 import Inicio from './views/Inicio.vue'
+import Menu from './views/Menu.vue'
 
 Vue.use(Router)
 
@@ -19,6 +19,11 @@ export default new Router({
       path: '/',
       name: 'inicio',
       component: Inicio
+    },
+    {
+      path: '/menu',
+      name: 'Menu',
+      component: Menu
     }
   ]
 })
