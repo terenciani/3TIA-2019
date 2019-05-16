@@ -2,7 +2,10 @@
   <v-app>
     <!--https://material.io/tools/icons/-->
     <v-toolbar color="teal lighten-2 white--text">
-        <v-toolbar-side-icon class="white--text"></v-toolbar-side-icon>
+        <v-toolbar-side-icon 
+          class="white--text"
+          @click="exibe = !exibe"
+        ></v-toolbar-side-icon>
         <v-toolbar-title>Barbearia</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-text-field
@@ -17,7 +20,11 @@
           <v-btn flat class="white--text">Link Three</v-btn>
         </v-toolbar-items>
     </v-toolbar>
-    <v-navigation-drawer absolute permanent>
+    <v-navigation-drawer 
+      absolute
+      temporary
+      v-model="exibe"
+    >
       <v-toolbar color="teal lighten-2 white--text">
         <h1>Barbearia</h1>
       </v-toolbar>
@@ -45,4 +52,16 @@
       <router-view></router-view>
     </v-content>
   </v-app>
+  
 </template>
+<script>
+  export default {
+    data(){
+      return{
+        exibe: false,
+        logado: false
+      }
+    } 
+  }
+</script>
+
