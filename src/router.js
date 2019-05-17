@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from './views/Login.vue'
 import Inicio from './views/Inicio.vue'
 import Menu from './views/Menu.vue'
+import Cartao from './views/Cartao.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/menu',
       name: 'Menu',
       component: Menu
+    },
+    {
+      path: '/cartao',
+      name: 'Cartao',
+      component: Cartao
     }
   ]
 })
